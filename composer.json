@@ -29,5 +29,5 @@
     },
     "scripts": {
         "test": "phpunit"
-    },
+    }
 }
