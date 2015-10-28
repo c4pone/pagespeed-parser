@@ -11,7 +11,7 @@ The best way to install the library is by using [Composer](http://getcomposer.or
 ``` javascript
 {
     "require": {
-        "c4pone/pagespeed-parser": "~0.1",
+        "c4pone/pagespeed-parser": "dev-master",
     }
 }
 ```
