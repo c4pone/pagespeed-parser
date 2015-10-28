@@ -1,0 +1,38 @@
+{
+    "name": "c4pone/pagespeed-parser",
+    "description": "php module to parse pagespeed insights api results",
+    "keywords": [
+        "api","google","PageSpeedInsights",'parser'
+    ],
+    "homepage": "https://github.com/c4pone/pagespeed-parser",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Florian Kirchner",
+            "email": "mail@flo.ninja",
+            "homepage": "https://codebuster.de",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php" : ">=5.3.0",
+    },
+    "require-dev": {
+        "phpunit/phpunit" : "4.*",
+        "scrutinizer/ocular": "1.1.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "c4pone\\PageSpeed\\": "src/"
+        },
+        "files": ["src/helper.php"]
+    },
+    "scripts": {
+        "test": "phpunit"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "0.1"
+        }
+    }
+}
