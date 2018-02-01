@@ -79,6 +79,17 @@ class Parser {
 
         return $results;
     }
+    
+    /**
+     * Returns the score of a specific key.
+     *
+     * @param String $key
+     * @return String
+     */
+    public function getScore($key)
+    {
+        return $this->getScores()[$key];
+    }
 
     /**
      * Returns all the recommendations.
