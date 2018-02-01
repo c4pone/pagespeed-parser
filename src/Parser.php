@@ -93,6 +93,8 @@ class Parser {
         foreach($this->get('formattedResults.ruleResults',[]) as $name => $ruleResult) {
             $this->parseRecommendation($recommendations, $name, $ruleResult);
         }
+        
+        return $recommendations;
     }
 
 
