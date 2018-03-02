@@ -135,12 +135,7 @@ class Parser {
         }
 
         foreach ($groups as $group) {
-
-            $recommendations = array_add(
-                $recommendations,
-                $group.'.'.$recommendationName,
-                $recommendation
-            );
+            $recommendations[$group][$recommendationName][] = $recommendation;
         }
     }
 
