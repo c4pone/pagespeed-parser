@@ -88,7 +88,7 @@ class Parser {
      */
     public function getScore($key)
     {
-        return $this->getScores()[$key];
+        return $this->getScores()[$key] ?? false;
     }
 
     /**
