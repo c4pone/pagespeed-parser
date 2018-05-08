@@ -16,7 +16,12 @@ class Screenshot {
 
     public function getData()
     {
-        return $this->data; 
+        $data = str_replace(
+            array('_', '-'), 
+            array('/', '+'),
+            $this->data);
+        
+        return $data; 
     }
 
     public function save($path)

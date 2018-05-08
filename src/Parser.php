@@ -79,6 +79,17 @@ class Parser {
 
         return $results;
     }
+    
+    /**
+     * Returns the score of a specific key.
+     *
+     * @param String $key
+     * @return String
+     */
+    public function getScore($key)
+    {
+        return $this->getScores()[$key] ?? false;
+    }
 
     /**
      * Returns all the recommendations.
@@ -93,6 +104,8 @@ class Parser {
         foreach($this->get('formattedResults.ruleResults',[]) as $name => $ruleResult) {
             $this->parseRecommendation($recommendations, $name, $ruleResult);
         }
+        
+        return $recommendations;
     }
 
 
@@ -122,12 +135,7 @@ class Parser {
         }
 
         foreach ($groups as $group) {
-
-            $recommendations = array_add(
-                $recommendations,
-                $group.'.'.$recommendationName,
-                $recommendation
-            );
+            $recommendations[$group][$recommendationName] = $recommendation;
         }
     }
 
